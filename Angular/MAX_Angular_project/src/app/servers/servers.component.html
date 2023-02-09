@@ -9,6 +9,7 @@
 >
   Add Server
 </button>
-<P>{{ serverCreationStatus }} </P>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <P>{{ serverCreationStatus }} </P> -->
+<P *ngIf="serverCreated">Server was created, server name is {{ serverName }}</P>
+<!-- *ngIf is a directive which adds or removes element from the DOM -->
+<app-server *ngFor="let server of servers"></app-server>
